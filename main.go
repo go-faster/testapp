@@ -21,6 +21,7 @@ func main() {
 			Addr string
 		}
 		flag.StringVar(&arg.Addr, "addr", ":8080", "address to listen on")
+		flag.Parse()
 		mux := http.NewServeMux()
 		mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 			_, _ = w.Write([]byte("Hello, world!"))
