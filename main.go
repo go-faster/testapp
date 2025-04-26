@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"net/http"
+	"time"
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/sdk/app"
@@ -27,8 +28,10 @@ func main() {
 			_, _ = w.Write([]byte("Hello, world!"))
 		})
 		srv := &http.Server{
-			Addr:    arg.Addr,
-			Handler: mux,
+			Addr:              arg.Addr,
+			Handler:           mux,
+			ReadTimeout:       time.Second,
+			ReadHeaderTimeout: time.Second,
 		}
 		g, ctx := errgroup.WithContext(ctx)
 		g.Go(func() error {
