@@ -46,6 +46,6 @@ func main() {
 			return nil
 		})
 
-		return nil
+		return g.Wait()
 	})
 }
