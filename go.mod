@@ -1,12 +1,12 @@
 module github.com/go-faster/testapp
 
-go 1.24
+go 1.24.0
 
 require (
 	github.com/go-faster/errors v0.7.1
 	github.com/go-faster/sdk v0.28.0
 	go.uber.org/zap v1.27.0
-	golang.org/x/sync v0.16.0
+	golang.org/x/sync v0.17.0
 )
 
 require (
