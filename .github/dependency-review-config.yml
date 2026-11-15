@@ -1,6 +1,8 @@
 fail_on_severity: 'low'
 allow_licenses:
   - 'MIT'
+  # github.com/segmentio/asm, pulled in by go-faster/jx via go-faster/sdk.
+  - 'MIT-0'
   - 'ISC'
   - 'MPL-2.0'
   - 'BSD-2-Clause'
